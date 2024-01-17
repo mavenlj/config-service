@@ -6,7 +6,7 @@ server:
     threads:
       max: 50
       min-spare: 5
-
+  shutdown: graceful
 spring:
   application:
     name: config-server
@@ -19,3 +19,5 @@ spring:
           timeout: 5
           clone-on-start: true
           force-pull: true
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
